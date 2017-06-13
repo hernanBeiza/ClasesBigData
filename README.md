@@ -13,3 +13,11 @@ Les dejo aquí mis ejemplos de las clases de Big Data que hemos tenido en la UGM
 ### mythirdmaven
 * Seguimos con el ejemplo anterior. Pero ahora leemos un CSV con las temperatuvas máximas y mínimas de estaciones de monitoreo climatológico de Chile.
 * La idea es obtener la mínima temperatura por estación
+
+### mypruebamaven
+* En este proyecto desarrollé el primer script de la prueba de Hadoop
+* Acá había que ordenar ascendentemente las temperaturas por estación 
+
+### mypruebainvertidomaven
+* En este proyecto desarrollé el segundo script de la prueba de Hadoop.
+* Había que crear un índice invertido, usando como key una palabra del contenido
