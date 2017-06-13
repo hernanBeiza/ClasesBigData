@@ -14,7 +14,7 @@ public class App
     public static void main( String[] args ) throws Exception
     {
     	try{
-	        System.out.println( "mysecondmaven" );
+	        System.out.println( "mysecondmaven: temperatura alta" );
 	        Configuration conf = new Configuration();
 	        String[] opciones = new GenericOptionsParser(conf,args).getRemainingArgs();
 	        Job trabajo = Job.getInstance(conf,"mysecondmaven");

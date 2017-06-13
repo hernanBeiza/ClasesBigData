@@ -11,9 +11,9 @@ public class MyMapper extends Mapper <Object, Text, Text, DoubleWritable> {
 	public MyMapper(){ }
 
 	public void map(Object k, Text linea, Context contexto){
-		System.out.println("Procesando");
-		System.out.println("Key: "+k);
-		System.out.println("Valor: "+linea);
+		//System.out.println("Procesando");
+		//System.out.println("Key: "+k);
+		//System.out.println("Valor: "+linea);
 		
 		StringTokenizer parser = new StringTokenizer(linea.toString(),";");
 		try {
@@ -35,9 +35,10 @@ public class MyMapper extends Mapper <Object, Text, Text, DoubleWritable> {
 				String key8 = new String(parser.nextToken());
 				//System.out.println("key8: "+key8);			
 				String key9 = new String(parser.nextToken());
-				System.out.println("key9: "+key9);			
+				//System.out.println("key9: "+key9);
 				//Double valorMinimo = Double.parseDouble(key8);	
 				Double valorMaximo = Double.parseDouble(key9);
+				System.out.println("MyMapper.java: key: "+key+" valorMaximo: "+valorMaximo);
 				DoubleWritable value = new DoubleWritable(valorMaximo);
 				contexto.write(key,value);
 			}

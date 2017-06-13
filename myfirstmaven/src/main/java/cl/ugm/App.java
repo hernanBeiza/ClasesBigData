@@ -12,8 +12,8 @@ public class App
 {
     public static void main( String[] args ) throws Exception
     {
-    	try{
-	        System.out.println( "CuentaPalabras" );
+    	try {
+	        System.out.println( "myfirstmaven: CuentaPalabras" );
 	        Configuration conf = new Configuration();
 	        String[] opciones = new GenericOptionsParser(conf,args).getRemainingArgs();
 	        Job trabajo = Job.getInstance(conf,"CuentaPalabras");
