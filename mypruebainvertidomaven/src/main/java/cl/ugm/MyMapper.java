@@ -6,6 +6,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 import java.util.StringTokenizer;
 
+// Si necesito expulsar otro tipo de dato debo editar acá
 public class MyMapper extends Mapper <Object, Text, Text, Text> {
 	
 	public MyMapper(){ }
@@ -24,6 +25,7 @@ public class MyMapper extends Mapper <Object, Text, Text, Text> {
 				StringTokenizer parser2 = new StringTokenizer(texto.toString()," ");
 				try {
 					while (parser2.hasMoreTokens()) {
+						// Lo paso a mayúsculas para agrupar bien por el texto y no diferenciar con las minus
 						Text palabra = new Text(parser2.nextToken().toUpperCase());
 						System.out.println(palabra);
 						contexto.write(palabra,new Text(String.valueOf(idDocumento)));
