@@ -1,13 +1,12 @@
 package cl.ugm;
 
-import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
 import java.util.StringTokenizer;
 
-public class MyMapper extends Mapper <Object, Text, Text, IntWritable> {
+public class MyMapper extends Mapper <Object, Text, Text, Text> {
 	
 	public MyMapper(){ }
 
@@ -25,9 +24,9 @@ public class MyMapper extends Mapper <Object, Text, Text, IntWritable> {
 				StringTokenizer parser2 = new StringTokenizer(texto.toString()," ");
 				try {
 					while (parser2.hasMoreTokens()) {
-						Text palabra = new Text(parser2.nextToken());
+						Text palabra = new Text(parser2.nextToken().toUpperCase());
 						System.out.println(palabra);
-						contexto.write(palabra,new IntWritable(idDocumento));
+						contexto.write(palabra,new Text(String.valueOf(idDocumento)));
 					}
 				}
 				catch(Exception ex){

@@ -24,8 +24,8 @@ public class App
 	        trabajo.setCombinerClass(MyReducer.class);
 	        trabajo.setReducerClass(MyReducer.class);
 	        trabajo.setOutputKeyClass(Text.class);
-	        trabajo.setOutputValueClass(IntWritable.class);
-			//trabajo.setOutputValueClass(DoubleWritable.class);
+	        trabajo.setOutputValueClass(Text.class);
+			//trabajo.setOutputValueClass(IntWritable.class);
 	        for(int i = 0;i<opciones.length-1;i++){
 	        	FileInputFormat.addInputPath(trabajo,new Path(opciones[i]));        	
 	        }

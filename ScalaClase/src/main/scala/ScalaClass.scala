@@ -5,7 +5,7 @@ class ScalaClass(nombre:String) {
 
   println(s"ScalaClase $nombre");
 
-  def presentar(): String ={
+  def presentar(): String = {
     "Soy ScalaClase";
   }
 
