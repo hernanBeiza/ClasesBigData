@@ -5,7 +5,6 @@ import org.apache.hadoop.mapreduce.*;
 import org.apache.hadoop.util.*;
 import org.apache.hadoop.fs.*;
 import org.apache.hadoop.io.*;
-import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.mapreduce.lib.input.*;
 import org.apache.hadoop.mapreduce.lib.output.*;
 
@@ -37,6 +36,5 @@ public class App
 			ex.printStackTrace();
     	}
 
-        
 	}
 }

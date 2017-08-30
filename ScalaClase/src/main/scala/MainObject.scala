@@ -84,7 +84,7 @@ object MainObject {
         case _ => println("Hay que trabajar")
       }
     }
-    // PAttern Matchin con los tipos de datos ¡!
+    // Pattern Matchin con los tipos de datos ¡!
     val tonterasList = List(23, "Hello", 8.5, 'q')
     for (tontera <- tonterasList) {
       tontera match {
@@ -94,6 +94,19 @@ object MainObject {
         case other => println("got something else: " + other)
       }
     }
+
+    // El Underscore "_" es solo para expresiones lambda
+    val variosLambda = List(1,2,3);
+    variosLambda.map(_ * 2);
+    //El elemento mayor de la lista
+    //variosLambda.max
+    //El total de elementos
+    //variosLambda.size
+
+    //Funciones
+    val miFuncion = (param : Int) => { param * 2 }
+    //No se necesita el _
+    variosLambda.map(miFuncion);
 
     /*
     // Comenzando con la interacción
